@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #315358;
+  font-family: "Zen Kaku Gothic Antique", sans-serif;
+  list-style: none;
+}
+p {
+  font-size: 20px;
+}
+.cover {
+  padding: 50px 50px;
+}
+.bullet {
+  font-size: 40px;
+  font-weight: 500;
+}
+.greet-page {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #fff 50%, #ecfbff 50%);
+}
+.very-big-heading {
+  font-size: 100px;
+  font-weight: 700;
+  letter-spacing: 25px;
+  text-transform: uppercase;
+  color: #315358;
+}
+.big-heading {
+  color: #5a5a5a;
+  letter-spacing: 10px;
+  font-size: 50px;
+  font-weight: 100;
+}
+.intro-div {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro {
+  margin: 0 50px;
+  padding: 10px 50px;
+  height: 100vh;
+  width: 40%;
+  background-color: #ecfbff;
+}
+.skills {
+  margin: 0 50px;
+  height: 100vh;
+  width: 60%;
+  display: flex;
+}
+.ms {
+  display: none;
+}
+.skills img {
+  transform: translateX(+60px);
+  padding-top: 280px;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+.profile img {
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.mid-big-heading {
+  color: black;
+  font-family: "Poppins";
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.mid-heading {
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+.main-heading {
+  font-size: 50px;
+  font-weight: 600;
+  padding: 20px 0px;
+}
+.topic-heading {
+  font-size: 30px;
+  font-weight: 520;
+  margin: 20px 0;
+}
+.sub-topic-heading {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+.location {
+  margin: 10px 0px;
+}
+.content {
+  /* padding: 10px 50px; */
+  height: 20vh;
+  width: 100%;
+}
+.index {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.index h3 {
+  font-family: "Poppins";
+  color: #aecfd8;
+  font-size: 40px;
+}
+.index h4 {
+  font-weight: 500;
+  font-size: 30px;
+}
+.speed-test {
+  padding: 20px 0px;
+}
+.speed-test img {
+  height: 50%;
+  width: 50%;
+  padding: 10px 0;
+  object-fit: cover;
+}
+.split {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+video {
+  width: 50%;
+  height: 50%;
+}
+footer {
+  background-color: #ecfbff;
+  height: 20vh;
+  display: flex;
+  font-size: 15px;
+  font-weight: 500;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .links i:nth-child(n) {
+  padding: 0px 3px;
+}
+@media screen and (max-width: 720px) {
+  .ms {
+    display: block;
+    transform: translateX(-1px) !important;
+    height: 100%;
+  }
+  .fs {
+    display: none;
+  }
+  p {
+    font-size: 17px;
+  }
+  .very-big-heading {
+    font-size: 50px;
+    letter-spacing: 10px;
+  }
+  .big-heading {
+    letter-spacing: 5px;
+    font-size: 25px;
+  }
+  .intro-div {
+    height: auto;
+    flex-direction: column;
+  }
+  .cover {
+    padding: 10px 25px;
+  }
+  .intro {
+    padding: 10px 20px;
+    padding-bottom: 30px;
+    width: 100%;
+    height: auto;
+  }
+  .profile img {
+    padding: 10px 10px;
+    height: 200px;
+    width: 200px;
+  }
+  .mid-big-heading {
+    font-size: 25px;
+    letter-spacing: 1.5px;
+  }
+  .mid-heading {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  .skills {
+    height: auto;
+    margin: 0;
+    width: 100%;
+  }
+  .main-heading {
+    font-size: 30px;
+  }
+  .topic-heading {
+    font-size: 20px;
+  }
+  .sub-topic-heading {
+    font-size: 17px;
+  }
+  .content {
+    padding-top: 10px;
+  }
+  .index {
+    padding: 0px 30px;
+  }
+  .index h3 {
+    font-size: 18px;
+  }
+  .index h4 {
+    font-size: 20px;
+  }
+  .split {
+    padding: 20px 0;
+    flex-direction: column;
+  }
+  .speed-test img {
+    height: 100%;
+    width: 100%;
+  }
+  .split p {
+    padding: 5px 0;
+    order: 1;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+  }
+  footer {
+    font-size: 14px;
+  }
+}
