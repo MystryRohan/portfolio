@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter";
+  list-style: none;
+}
+
+.cursor {
+  z-index: 0;
+  width: 15px;
+  height: 15px;
+  position: fixed;
+  border-radius: 50%;
+  background-color: black;
+  /* cursor: pointer; */
+}
