@@ -62,11 +62,11 @@
   box-shadow: 1px 1px 50px #f89820;
 }
 .wrapper:nth-of-type(6) .skills-image {
-  top: -23vh;
-  right: 22vw;
-  height: 15vh;
-  width: 12vw;
-  box-shadow: 1px 1px 50px #00758f;
+  top: -25vh;
+  right: 23vw;
+  height: 20vh;
+  width: 15vw;
+  box-shadow: 1px 1px 50px #6db33f;
 }
 .wrapper:nth-of-type(7) .skills-image {
   top: 28vh;
@@ -85,4 +85,206 @@
   top: 30vh;
   left: 6vw;
   box-shadow: 1px 1px 50px #f0db4f;
+}
+/* Projects */
+
+.work {
+  width: 100%;
+  height: auto;
+  flex-direction: column;
+  padding: 1rem 18rem;
+  background-color: #f9f9f9;
+  z-index: 0;
+}
+.section {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.heading {
+  color: #363636;
+  font-size: 6rem;
+  align-self: flex-start;
+}
+.subtext {
+  padding: 1rem;
+  font-weight: 500;
+  align-self: flex-start;
+}
+.work-tile {
+  width: 100%;
+  height: 12rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 14px;
+  padding: 0 1rem;
+}
+.proj-img {
+  display: none;
+}
+.number {
+  font-size: 1rem;
+  color: #363636;
+  padding-right: 1rem;
+}
+.title-div {
+  display: flex;
+  align-items: center;
+}
+.title h4 {
+  font-size: 1.5rem;
+}
+.title p {
+  font-size: 0.9rem;
+  color: #5f5f5f;
+}
+.preview {
+  width: 12rem;
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.a-link {
+  text-decoration: none;
+  color: white;
+  height: 3rem;
+  width: 12rem;
+  border-radius: 6rem;
+  padding: 15px 32px;
+  background-color: #363636;
+  text-align: center;
+}
+.there-more {
+  color: #5f5f5f;
+}
+.all-proj-link {
+  padding-left: 1rem;
+  font-size: 4rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #363636;
+}
+
+@media screen and (max-width: 1440px) {
+  .work {
+    padding: 1rem 12rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .work {
+    padding: 1rem 1rem;
+  }
+  .section {
+    height: 20vh;
+  }
+  .heading {
+    font-size: 2.5rem;
+  }
+  .subtext {
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+  }
+  .number {
+    display: none;
+  }
+  .work-tile {
+    margin: 1rem 0;
+    padding: 2rem;
+    min-height: 70vh;
+    flex-direction: column;
+    box-shadow: 1px 1px 15px #e0e0e0;
+  }
+  .view-all {
+    padding: 1rem;
+    height: 30vh;
+  }
+  .all-proj-link {
+    padding: 0;
+    font-size: 3rem;
+  }
+  .title-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .preview {
+    height: auto;
+  }
+  .proj-img {
+    display: block;
+  }
+  .proj-img img {
+    height: 30vh;
+    filter: grayscale();
+  }
+  .wrapper:nth-of-type(1) .skills-image {
+    top: -22vh;
+    left: 1vw;
+    height: 15vh;
+    width: 25vw;
+    box-shadow: 1px 1px 50px #61dbfb;
+  }
+  .wrapper:nth-of-type(2) .skills-image {
+    top: 0vh;
+    right: 30vw;
+    height: 30vh;
+    width: 25vw;
+    box-shadow: 1px 1px 50px #4584b6;
+  }
+  .wrapper:nth-of-type(3) .skills-image {
+    top: 25vh;
+    right: 32vw;
+    width: 20vw;
+    height: 15vh;
+    box-shadow: 1px 1px 50px #1572b6;
+  }
+  .wrapper:nth-of-type(4) .skills-image {
+    top: 1vh;
+    left: 28vw;
+    height: 25vh;
+    width: 25vw;
+    box-shadow: 1px 1px 50px #339933;
+  }
+  .wrapper:nth-of-type(5) .skills-image {
+    top: -25vh;
+    left: 30vw;
+    height: 25vh;
+    width: 30vw;
+    box-shadow: 1px 1px 50px #f89820;
+  }
+  .wrapper:nth-of-type(6) .skills-image {
+    top: -24vh;
+    right: 28vw;
+    height: 15vh;
+    width: 28vw;
+    box-shadow: 1px 1px 50px #6db33f;
+  }
+  .wrapper:nth-of-type(7) .skills-image {
+    top: 25vh;
+    right: 10vw;
+    height: 15vh;
+    width: 20vw;
+    box-shadow: 1px 1px 50px #e34c26;
+  }
+  .wrapper:nth-of-type(8) .skills-image {
+    box-shadow: 1px 1px 50px #000;
+  }
+  .wrapper:nth-of-type(9) .skills-image {
+    width: 40vw;
+    height: 15vh;
+    top: 25vh;
+    left: 23vw;
+    box-shadow: 1px 1px 50px #f0db4f;
+  }
 }

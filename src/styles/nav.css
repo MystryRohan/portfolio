@@ -5,11 +5,12 @@ nav {
   justify-content: flex-end;
   padding: 10px;
   box-sizing: border-box;
-  cursor: pointer;
+  height: 10vh;
   z-index: 1;
   mix-blend-mode: difference;
 }
 .burger {
+  cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;

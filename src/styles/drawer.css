@@ -37,8 +37,28 @@
 .menu a {
   color: #b3b3b3;
 }
-.menu footer {
+.socials {
   display: flex;
-  gap: 1rem;
-  font-size: small;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: smaller;
+  color: #b3b3b3;
+}
+
+@media screen and (max-width: 480px) {
+  .menu {
+    width: 100%;
+    align-items: center;
+  }
+  .menu div p {
+    font-size: 1rem;
+  }
+  .nav {
+    font-size: 1rem;
+    gap: 10px;
+  }
+  .socials p {
+    font-size: smaller !important;
+  }
 }

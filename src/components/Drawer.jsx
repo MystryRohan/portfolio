@@ -3,7 +3,7 @@ import { menuSlide } from "../anim/anim.js";
 import { slide } from "../anim/anim.js";
 import { NavLink } from "react-router-dom";
 import Curve from "./Curve";
-import { CgClose } from "react-icons/cg";
+import { CgClose, CgInstagram } from "react-icons/cg";
 import "../styles/drawer.css";
 
 const Drawer = ({ showNavHandler }) => {
@@ -37,11 +37,10 @@ const Drawer = ({ showNavHandler }) => {
           </motion.div>
         ))}
       </div>
-      <footer>
-        <span>Linked</span>
-        <span>Instagram</span>
-        <span>Leetcode</span>
-      </footer>
+      <div className="socials">
+        <CgInstagram />
+        <p>Instagram</p>
+      </div>
       <Curve />
     </motion.div>
   );

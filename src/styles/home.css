@@ -1,12 +1,12 @@
 .home {
   z-index: 0;
-  padding: 1rem;
+  padding: 5rem;
   flex-direction: column;
 }
 .home h1 {
   z-index: -1;
   font-weight: 500;
-  font-size: 20rem;
+  font-size: 25rem;
 }
 .home img {
   position: absolute;
@@ -20,31 +20,71 @@
   justify-content: space-between;
 }
 .content {
-  width: 24rem;
+  width: 40%;
   height: 10rem;
-}
-.left {
   padding-left: 2rem;
 }
+.content p {
+  font-size: 2rem;
+}
+
 .links {
   display: flex;
   width: 15rem;
   justify-content: space-between;
   padding-top: 1.5rem;
 }
-.links a {
+.links span {
+  padding: 0rem 0.5rem;
+}
+.links a,
+span {
   cursor: pointer;
   text-transform: uppercase;
-  font-size: small;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #1a1a1a;
 }
-.scroll-div {
-  display: flex;
-  flex-direction: column;
-  align-items: end;
+
+@media screen and (max-width: 1440px) {
+  .home h1 {
+    font-size: 20rem;
+  }
+  .content {
+    width: 30%;
+  }
+  .content p {
+    font-size: 1.1rem;
+  }
+  .links a,
+  .links span {
+    font-size: smaller;
+  }
 }
-.scroll-down {
-  writing-mode: vertical-rl;
-  padding: 1rem 0;
+@media screen and (max-width: 480px) {
+  .home {
+    padding: 1rem 2rem;
+  }
+  .home h1 {
+    font-size: 7rem;
+  }
+  .home img {
+    height: 40vh;
+  }
+  .side-section {
+    padding: 0;
+    width: 90%;
+    margin-bottom: 4rem;
+  }
+  .content {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .content p {
+    text-align: center;
+  }
 }

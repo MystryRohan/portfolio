@@ -15,9 +15,9 @@ const About = () => {
           I'm is a Passionate Full Stack Developer with a solid background in
           Computer Engineering. Experienced in building dynamic web applications
           and leveraging cutting-edge technologies to deliver innovative
-          solutions. Proficient in Python and JavaScript, with expertise in
-          frameworks like React.js and Express.js. Skilled in database
-          management with MongoDB and MySQL.
+          solutions. Proficient in Python, Java and JavaScript, with expertise
+          in frameworks like Springboot, React.js and Express.js. Skilled in
+          database management with MongoDB and MySQL.
         </motion.h5>
       </div>
       <motion.div className="skills" {...anime}>
@@ -33,18 +33,22 @@ const About = () => {
             </ul>
           </div>
           <div>
-            <h3>Web Development</h3>
+            <h3>Development</h3>
             <ul>
-              <li>HTML 5</li>
-              <li>CSS 3</li>
-              <li>React</li>
+              <li>Springboot</li>
               <li>Express</li>
               <li>Node</li>
+              <li>React</li>
+              <li>Redux</li>
+              <li>HTML 5</li>
+              <li>CSS 3</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Databases</h3>
+            <ul>
               <li>MongoDB</li>
               <li>MySQL</li>
-              <li>Redux</li>
-              <li>Git</li>
-              <li>NPM</li>
             </ul>
           </div>
           <div>
@@ -54,6 +58,8 @@ const About = () => {
               <li>Postman</li>
               <li>Google Colab</li>
               <li>Figma</li>
+              <li>Git</li>
+              <li>NPM</li>
             </ul>
           </div>
         </div>

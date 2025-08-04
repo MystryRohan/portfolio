@@ -13,7 +13,6 @@
   font-size: large;
 }
 .skills {
-  /* background-color: aqua; */
   padding-top: 4rem;
   width: 100%;
 }
@@ -29,4 +28,28 @@
 }
 .list h3:nth-child(n) {
   padding: 1rem 0;
+}
+
+@media screen and (max-width: 1440px) {
+  .about {
+    padding: 1rem 12rem;
+    height: auto;
+  }
+  .list {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about {
+    padding: 3rem 3rem;
+    width: fit-content;
+  }
+  .me {
+    padding: 1rem;
+  }
+  .list {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+  }
 }

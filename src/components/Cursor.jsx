@@ -1,5 +1,5 @@
 import { animate, transform } from "motion";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 const Cursor = ({ stickyElement }) => {

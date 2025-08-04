@@ -1,0 +1,27 @@
+.wrapper-landing {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+.landing-text {
+  position: sticky;
+  font-size: 14rem;
+  font-weight: 500;
+}
+.give-height {
+  height: 100vh;
+}
+
+@media screen and (max-width: 1440px) {
+  .landing-text {
+    font-size: 12rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .landing-text {
+    font-size: 5rem;
+  }
+}

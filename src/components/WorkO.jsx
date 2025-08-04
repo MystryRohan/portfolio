@@ -28,18 +28,23 @@ const WorkO = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "start"],
+    offset: ["center end", "start end"],
   });
   const x = useTransform(scrollYProgress, [0, 1], [-10, 0]);
-  const transform = useMotionTemplate`translateX(${x}%)`;
+  const transform = useMotionTemplate`translateY(${x}%)`;
   // useMotionValueEvent(scrollYProgress, "change", (latest) =>
   //   console.log(latest)
   // );
   return (
-    <div className="container work" ref={ref}>
-      <motion.div className="section" style={{ transform }}>
-        <h1 className="heading">Cooked</h1>
-        <h3 className="subtext">Recently Cooked Websites</h3>
+    <div className="container work">
+      <motion.div
+        className="section"
+        initial={{ y: 20, x: -20, opacity: 0 }}
+        whileInView={{ y: 0, x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="heading">Projects</h1>
+        <h3 className="subtext">Recently Built Websites</h3>
       </motion.div>
 
       {projects.map((project, idx) => (
@@ -61,7 +66,7 @@ const WorkO = () => {
         </motion.div>
       ))}
       <motion.div
-        className="section"
+        className="section view-all"
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.75 }}
@@ -109,15 +114,14 @@ const WorkTile = ({ idx, name, link, category }) => {
       variants={anime}
     >
       <div className="title-div">
-        {/* <div>
-          
-          {/* <motion.span>{idx + 1}</motion.span> */}
-        {/* </div> */}
         <h5 className="number">{idx + 1}.</h5>
         <div className="title">
           <h4>{name}</h4>
           <p>{category}</p>
         </div>
+      </div>
+      <div className="proj-img">
+        <img src="./vite.svg" alt="proj-img" />
       </div>
       <motion.div className="preview">
         <motion.a

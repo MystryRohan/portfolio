@@ -8,99 +8,7 @@
   align-items: center;
   background-color: white;
 }
-.wrapper-landing {
-  display: flex;
-  height: 100vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-}
-.landing-text {
-  position: sticky;
-  font-size: 12rem;
-  font-weight: 500;
-}
-.give-height {
-  height: 100vh;
-}
 
-.work {
-  width: 100%;
-  height: auto;
-  flex-direction: column;
-  padding: 1rem 8rem;
-  background-color: #f9f9f9;
-  z-index: 0;
-}
-.section {
-  width: 100%;
-  height: 40vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.heading {
-  color: #363636;
-  font-size: 6rem;
-  align-self: flex-start;
-}
-.subtext {
-  padding: 1rem;
-  font-weight: 500;
-  align-self: flex-start;
-}
-.work-tile {
-  width: 100%;
-  height: 12rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 14px;
-  padding: 0 1rem;
-}
-.number {
-  font-size: 1rem;
-  color: #363636;
-  padding-right: 1rem;
-}
-.title-div {
-  display: flex;
-  align-items: center;
-}
-.title h4 {
-  font-size: 1.5rem;
-}
-.title p {
-  font-size: 0.9rem;
-  color: #5f5f5f;
-}
-.preview {
-  width: 12rem;
-  height: 12rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.a-link {
-  text-decoration: none;
-  color: white;
-  height: 3rem;
-  width: 12rem;
-  border-radius: 6rem;
-  padding: 15px 32px;
-  background-color: #363636;
-}
-.there-more {
-  color: #5f5f5f;
-}
-.all-proj-link {
-  padding-left: 1rem;
-  font-size: 4rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: #363636;
-}
 @keyframes slide {
   0% {
     transform: translateX(10px);
@@ -112,7 +20,9 @@
     transform: translateX(-10px);
   }
 }
-
+@media screen and (max-width: 480px) {
+}
+/* 
 @media screen and (max-width: 400px) {
   .cursor {
     display: none;
@@ -132,13 +42,11 @@
   }
   .home {
     position: relative;
-    /* background-color: #5f5f5f; */
   }
   .home h1 {
-    /* position: absolute; */
     font-size: 7rem;
     padding-top: 2rem;
-    /* top: 50%; */
+
   }
   .home img {
     position: relative;
@@ -168,7 +76,6 @@
     padding: 1rem 0;
   }
   .work-tile {
-    /* background-color: red; */
     height: 7rem;
     padding: 0 0.5rem;
   }
@@ -212,4 +119,4 @@
     height: 75vh;
     justify-content: space-around;
   }
-}
+} */

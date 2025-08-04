@@ -13,10 +13,6 @@ const Footer = () => {
       <h1>Let's Connect</h1>
       <p>Try Karke Dekhte He</p>
       <p>© Rohan Mistry 2025</p>
-      <div className="scroll-div scroll-div-footer">
-        <RxDoubleArrowUp />
-        <span className="scroll-down">Scroll up</span>
-      </div>
     </motion.footer>
   );
 };
