@@ -1,11 +1,15 @@
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import Home from "./Home";
 import Work from "./Work";
+import "../styles/landing.css";
 
 const Landing = () => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll();
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
   const scaleValue = useTransform(scrollYProgress, [0, 1], [1, 4]);
   const opacityValue = useTransform(scrollYProgress, [0, 1], [1, 0]);
@@ -24,7 +28,9 @@ const Landing = () => {
         </div>
       </div>
       <Home />
-      <Work />
+      <div>
+        <Work />
+      </div>
     </>
   );
 };

@@ -1,12 +1,28 @@
 import {
   motion,
   useMotionTemplate,
-  useMotionValueEvent,
   useScroll,
   useTransform,
-} from "motion/react";
+} from "framer-motion";
 import { useRef } from "react";
-import { RiExternalLinkLine } from "react-icons/ri";
+import {
+  FaCode,
+  FaCodeBranch,
+  FaCodeCommit,
+  FaCodePullRequest,
+  FaCss3,
+  FaDatabase,
+  FaHtml5,
+  FaJava,
+  FaJs,
+  FaNode,
+  FaPython,
+  FaReact,
+} from "react-icons/fa6";
+import "../styles/work.css";
+import WorkO from "./WorkO";
+import { SiSpring, SiSpringboot } from "react-icons/si";
+
 const Work = () => {
   const projects = [
     {
@@ -26,111 +42,103 @@ const Work = () => {
     },
   ];
 
-  const ref = useRef(null);
+  const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "start"],
+    target: containerRef,
+    offset: ["start start", "end end"],
   });
-  const x = useTransform(scrollYProgress, [0, 1], [-10, 0]);
-  const transform = useMotionTemplate`translateX(${x}%)`;
-  // useMotionValueEvent(scrollYProgress, "change", (latest) =>
-  //   console.log(latest)
-  // );
-  return (
-    <div className="container work" ref={ref}>
-      <motion.div className="section" style={{ transform }}>
-        <h1 className="heading">Cooked</h1>
-        <h3 className="subtext">Recently Cooked Websites</h3>
-      </motion.div>
+  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4]);
 
-      {projects.map((project, idx) => (
-        <motion.div
-          style={{ width: "100%" }}
-          initial={{ y: 20, x: -20, opacity: 0 }}
-          whileInView={{ y: 0, x: 0, opacity: 1 }}
-          transition={{ duration: 0.75 }}
-          key={idx}
-          className="work-tile-container"
-        >
-          <WorkTile
-            idx={idx}
-            name={project.name}
-            category={project.category}
-            link={project.link}
-            animation={transform}
-          />
-        </motion.div>
-      ))}
-      <motion.div
-        className="section"
-        initial={{ y: 30, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.75 }}
-      >
-        <h3 className="subtext there-more">There's more</h3>
-        <a
-          href="https://github.com/MystryRohan?tab=repositories"
-          target="blank"
-          className="all-proj-link"
-        >
-          View All Projects
-          <RiExternalLinkLine />
-        </a>
-      </motion.div>
-    </div>
-  );
-};
-export default Work;
+  const isMobile = window.screen.width > 480;
 
-const WorkTile = ({ idx, name, link, category }) => {
-  const anime = {
-    hidden: {
-      opacity: 0,
-    },
-    bg: {
-      backgroundColor: "#f9f9f9",
-    },
-    hover: {
-      height: "15rem",
-      backgroundColor: "#fff",
-      transition: {
-        type: "tween",
-        ease: "easeIn",
-      },
-    },
-    hoverPreview: {
-      scale: 1.1,
-    },
-  };
   return (
-    <motion.div
-      className="work-tile"
-      initial="bg"
-      whileHover="hover"
-      variants={anime}
-    >
-      <div className="title-div">
-        {/* <div>
-          
-          {/* <motion.span>{idx + 1}</motion.span> */}
-        {/* </div> */}
-        <h5 className="number">{idx + 1}.</h5>
-        <div className="title">
-          <h4>{name}</h4>
-          <p>{category}</p>
+    <>
+      <div ref={containerRef} className="enlarged-div">
+        <div className="fixed-div">
+          <motion.div key={1} className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <FaReact size={isMobile ? "4rem" : "2rem"} color="#61DBFB" />
+            </div>
+          </motion.div>
+          <motion.div key={2} className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <FaPython size={isMobile ? "4rem" : "2rem"} color="#4584b6" />
+            </div>
+          </motion.div>
+          <motion.div className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <FaCss3 size={isMobile ? "4rem" : "2rem"} color="#1572B6" />
+            </div>
+          </motion.div>
+          <motion.div className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <FaNode size={isMobile ? "4rem" : "2rem"} color="#339933" />
+            </div>
+          </motion.div>
+          <motion.div className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <FaJava size={isMobile ? "4rem" : "2rem"} color="#f89820" />
+            </div>
+          </motion.div>
+          <motion.div className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <SiSpring size={isMobile ? "4rem" : "2rem"} color="#6db33f" />
+            </div>
+          </motion.div>
+          <motion.div className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <FaHtml5 size={isMobile ? "4rem" : "2rem"} color="#E34C26" />
+            </div>
+          </motion.div>
+          <motion.div className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <FaCode size={isMobile ? "4rem" : "2rem"} color="#fff" />
+            </div>
+          </motion.div>
+          <motion.div className="wrapper" style={{ scale: scale4 }}>
+            <div className="skills-image">
+              <FaJs size={isMobile ? "4rem" : "2rem"} color="#F0DB4F" />
+            </div>
+          </motion.div>
         </div>
       </div>
-      <motion.div className="preview">
-        <motion.a
-          className="a-link"
-          target="blank"
-          href={link}
-          whileHover="hoverPreview"
-          variants={anime}
-        >
-          View Project <RiExternalLinkLine />{" "}
-        </motion.a>
-      </motion.div>
-    </motion.div>
+      <WorkO />
+    </>
   );
 };
+
+export default Work;
+
+/**
+
+ <motion.div style={{ scale: scale4 }}>
+          <div className="skills-images">
+            <FaReact size={"4rem"} color="#61DBFB" />
+          </div>
+        </motion.div>
+        <motion.div className="skills-images" style={{ scale: scale4 }}>
+          <FaPython size={"4rem"} color="#4584b6" />
+        </motion.div>
+        <motion.div className="skills-images" style={{ scale: scale4 }}>
+          <FaCss3 size={"4rem"} color="#1572B6" />
+        </motion.div>
+        <motion.div className="skills-images" style={{ scale: scale4 }}>
+          <FaNode size={"4rem"} color="#339933" />
+        </motion.div>
+
+        <motion.div className="skills-images" style={{ scale: scale4 }}>
+          <FaJava size={"4rem"} color="#f89820" />
+        </motion.div>
+        <motion.div className="skills-images" style={{ scale: scale4 }}>
+          <FaDatabase size={"4rem"} color="#00758F" />
+        </motion.div>
+        <motion.div className="skills-images" style={{ scale: scale4 }}>
+          <FaHtml5 size={"4rem"} color="#E34C26" />
+        </motion.div>
+        <motion.div className="skills-images" style={{ scale: scale4 }}>
+          <FaCode size={"4rem"} color="#000" />
+        </motion.div>
+        <motion.div className="skills-images" style={{ scale: scale4 }}>
+          <FaJs size={"4rem"} color="#F0DB4F" />
+        </motion.div>
+ */

@@ -1,7 +1,6 @@
-import { animate, distance, transform } from "motion";
+import { animate, transform } from "motion";
 import { motion, useMotionValue, useSpring } from "motion/react";
 import { useEffect, useRef, useState } from "react";
-import { createWebSocketModuleRunnerTransport } from "vite/module-runner";
 
 const Cursor = ({ stickyElement }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -56,7 +55,7 @@ const Cursor = ({ stickyElement }) => {
 
   const manageMouseOver = () => {
     setIsHovered(true);
-    console.log("hover");
+    // console.log("hover");
   };
   const manageMouseLeave = () => {
     setIsHovered(false);

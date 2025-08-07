@@ -1,6 +1,6 @@
 import { RxDoubleArrowUp } from "react-icons/rx";
-import { motion } from "motion/react";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import "../styles/footer.css";
 
 const Footer = () => {
   return (
@@ -13,10 +13,6 @@ const Footer = () => {
       <h1>Let's Connect</h1>
       <p>Try Karke Dekhte He</p>
       <p>© Rohan Mistry 2025</p>
-      <div className="scroll-div scroll-div-footer">
-        <RxDoubleArrowUp />
-        <span className="scroll-down">Scroll up</span>
-      </div>
     </motion.footer>
   );
 };

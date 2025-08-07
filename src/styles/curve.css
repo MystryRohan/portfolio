@@ -1,0 +1,10 @@
+.svg {
+  position: absolute;
+  top: 0;
+  left: -99px;
+  width: 100px;
+  height: 100%;
+  /* fill: #2b2b2b; */
+  fill: #181818;
+  stroke: none;
+}

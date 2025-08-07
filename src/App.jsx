@@ -8,24 +8,32 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import Nav from "./components/Nav";
 import Cursor from "./components/Cursor";
-import { useRef } from "react";
+import Drawer from "./components/Drawer";
+import { useRef, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+
 function App() {
   const stickyElement = useRef(null);
-
+  const [showNav, setShowNov] = useState(false);
+  const showNavHandler = () => {
+    // console.log("nav");
+    setShowNov(!showNav);
+  };
   return (
-    <div>
-      <ReactLenis root lerp={0.5}>
-        <Router>
-          <Nav ref={stickyElement} />
-          <Cursor stickyElement={stickyElement} />
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-          <Footer />
-        </Router>
-      </ReactLenis>
-    </div>
+    <ReactLenis root lerp={0.5}>
+      <Router>
+        <Nav ref={stickyElement} showNavHandler={showNavHandler} />
+        <Cursor stickyElement={stickyElement} />
+        <AnimatePresence mode="wait">
+          {showNav && <Drawer showNavHandler={showNavHandler} />}
+        </AnimatePresence>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </ReactLenis>
   );
 }
 

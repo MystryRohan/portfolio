@@ -2,12 +2,11 @@ import {
   useScroll,
   useTransform,
   motion,
-  useMotionValueEvent,
   useMotionTemplate,
-} from "motion/react";
+} from "framer-motion";
 import { useRef } from "react";
 import { RxDoubleArrowDown } from "react-icons/rx";
-
+import "../styles/home.css";
 const Home = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -16,12 +15,15 @@ const Home = () => {
   });
 
   const scaleValue = useTransform(scrollYProgress, [0, 1], [1, 4]);
-  const y = useTransform(scrollYProgress, [0, 0.5, 1], [20, -15, -15]);
+  const y = useTransform(scrollYProgress, [0, 0.5, 1], [20, -20, -20]);
+  const yy = useTransform(scrollYProgress, [0, 0.5, 1], [10, -10, -10]);
   const y2 = useTransform(scrollYProgress, [0, 0.5, 1], [40, 0, 0]);
 
   const opacityValue = useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 0.75]);
 
-  const transform = useMotionTemplate`translateY(${y}%)`;
+  const transform = useMotionTemplate`translateY(${
+    window.screen.width > 1440 ? y : yy
+  }%)`;
   const transformX = useMotionTemplate`translateY(${y2}%)`;
 
   // useMotionValueEvent(scrollYProgress, "change", (latest) =>
@@ -55,14 +57,14 @@ const Home = () => {
             </a>
           </div>
         </motion.div>
-
-        <div className="content scroll-div">
-          <span className="scroll-down">Scroll Down</span>
-          <RxDoubleArrowDown />
-        </div>
       </div>
     </motion.div>
   );
 };
 
 export default Home;
+
+//  <div className="content scroll-div">
+//           <span className="scroll-down">Scroll Down</span>
+//           <RxDoubleArrowDown />
+//         </div>
